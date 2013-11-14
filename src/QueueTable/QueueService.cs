@@ -41,7 +41,7 @@ namespace QueueTable {
 
         public IEnumerable<QueueItem<T>> Dequeue(int batch) {
             var db = CreateConnection();
-            var results = db.DequeueFast(BatchSize: 100);
+            var results = db.DequeueFast(BatchSize: batch);
             return Parse(results);
         }
 
