@@ -1,14 +1,17 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace QueueTable
 {
-    internal class QueueItemProxy<T> : QueueItem<T> where T : class {
-        public QueueItemProxy(dynamic result) {
-            Id = result.QueueID;
-            Date = result.QueueDateTime;
-            Title = result.Title;
-            Status = (QueueStatus)result.Status;
-            Data = JsonConvert.DeserializeObject<T>(result.TextData);
+    internal class QueueItemProxy<T> : QueueItem<T> where T : class
+    {
+        public QueueItemProxy(int id, DateTime queueDateTime, string title, int status, string textData)
+        {
+            Id = id;
+            Date = queueDateTime;
+            Title = title;
+            Status = (QueueStatus)status;
+            Data = JsonConvert.DeserializeObject<T>(textData);
         }
     }
 }

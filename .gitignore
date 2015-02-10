@@ -16,6 +16,10 @@ TestResults
 # Build results
 [Dd]ebug/
 [Rr]elease/
+.vs/
+src/.vs/
+artifacts/
+src/artifacts/
 x64/
 *_i.c
 *_p.c

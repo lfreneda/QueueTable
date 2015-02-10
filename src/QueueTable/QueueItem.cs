@@ -2,11 +2,12 @@
 
 namespace QueueTable
 {
-    public class QueueItem<T> where T : class {
-
+    public class QueueItem<T> where T : class
+    {
         protected QueueItem() { }
 
-        public QueueItem(string title, T data) {
+        public QueueItem(string title, T data)
+        {
             Title = title;
             Data = data;
         }
@@ -17,8 +18,14 @@ namespace QueueTable
         public DateTime Date { get; protected set; }
         public QueueStatus Status { get; protected set; }
 
-        public void SetAsProcessed() {
+        public void SetAsProcessed()
+        {
             Status = QueueStatus.Processed;
+        }
+
+        public void SetAsPending()
+        {
+            Status = QueueStatus.Pending;
         }
     }
 }

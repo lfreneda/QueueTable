@@ -1,0 +1,30 @@
+﻿{
+    "version": "1.0.0-*",
+
+    "dependencies": {
+        "Newtonsoft.Json": "5.0.6",
+        "System.Data.Common": "1.0.0-beta1",
+        "System.Data.SqlClient": "1.0.0-beta1",
+        "System.Runtime": "4.0.20-beta-22416"
+    },
+
+    "frameworks": {
+
+        "net46": {
+            "dependencies": {
+            }
+        },
+
+        "aspnet50": {
+            "dependencies": {
+            }
+        },
+
+        "aspnetcore50": {
+            "dependencies": {
+                "Newtonsoft.Json": "5.0.6",
+                "System.Runtime": "4.0.20-beta-22416"
+            }
+        }
+    }
+}
